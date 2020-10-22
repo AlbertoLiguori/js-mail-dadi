@@ -6,7 +6,7 @@ for ( var i = 0; i < 100; i++){
   mailArray.push("alberto" + Math.floor(Math.random()*100)+ "@gmail.com");
   mailArray.push("gigi" + Math.floor(Math.random()*100)+ "@hotmail.it");
   mailArray.push("giacomo" + Math.floor(Math.random()*100)+ "@libero.net");
-  document.getElementById("list").innerHTML += `<li id="email-n` +[i]+ `">` + mailArray[i] +`<button class="copy-email" id="button`+ [i] + `" type="button" name="button">Copy</button></li>`
+  document.getElementById("list").innerHTML += `<li id="email-n` +[i]+ `">` + mailArray[i] +`<button class="copy-email" id="button`+ [i] + `" type="button" name="button">` + mailArray[i]+`</button></li>`
 }
 
 
@@ -54,19 +54,6 @@ resetAction.addEventListener("click", function(){
   document.getElementById("userEmail").value=""
 })
 
-// // copy email
-//
-// var copybutton = getElementById("button")
-//
-// copybutton.addEventListener("click", function(){
-//
-//
-//
-// })
-
-
-
-
 // DADI
 
 
@@ -93,11 +80,11 @@ var player2 = Math.floor((Math.random()*6)+1)
 if (player1 > player2){
   document.getElementById("winnerIs").innerHTML = "the winner is player1 con un punteggio di " + player1
   p1Score++
-  document.getElementById("p1-score").innerHTML = "Punteggio giocatore 1: "+p1Score
+  document.getElementById("p1-score").innerHTML = "Punteggio giocatore 1: "+ p1Score
 } else if (player2 > player1){
   document.getElementById("winnerIs").innerHTML = "the winner is player2 con un punteggio di " + player2
   p2Score++
-  document.getElementById("p2-score").innerHTML = "Punteggio giocatore 2: "+p2Score
+  document.getElementById("p2-score").innerHTML = "Punteggio giocatore 2: "+ p2Score
 } else {
   document.getElementById("winnerIs").innerHTML = "la sfida è terminata pari"
 }
