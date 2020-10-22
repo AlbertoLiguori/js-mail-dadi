@@ -73,21 +73,33 @@ resetAction.addEventListener("click", function(){
 // Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
+var play = document.getElementById("play")
+var p1Score=0;
+var p2Score=0;
+
+play.addEventListener("click", function() {
 var player1 = Math.floor((Math.random()*6)+1)
 var player2 = Math.floor((Math.random()*6)+1)
 
-console.log(player1)
+
+
+//console.log(player2)
+//console.log(player1)
   document.getElementById("giocata-player1").innerHTML= "il giocatore 1 ha totalizzato: "+player1
   document.getElementById("giocata-player2").innerHTML="il giocatore 2 ha totalizzato: "+player2
 
-console.log(player2)
+
 
 if (player1 > player2){
   document.getElementById("winnerIs").innerHTML = "the winner is player1 con un punteggio di " + player1
-
+  p1Score++
+  document.getElementById("p1-score").innerHTML = "Punteggio giocatore 1: "+p1Score
 } else if (player2 > player1){
   document.getElementById("winnerIs").innerHTML = "the winner is player2 con un punteggio di " + player2
-
+  p2Score++
+  document.getElementById("p2-score").innerHTML = "Punteggio giocatore 2: "+p2Score
 } else {
   document.getElementById("winnerIs").innerHTML = "la sfida è terminata pari"
 }
+
+})
