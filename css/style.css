@@ -1,0 +1,27 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+.mail-section{
+  height:50vh;
+}
+
+.search-email-cont{
+  float:left;
+}
+
+.arrayCont-list{
+  background-color: lightgrey;
+  border:2px solid red;
+  float:right;
+  height:50vh;
+  width:400px;
+  overflow-x: scroll;
+}
+
+.dice-game{
+  border-top:3px solid black;
+}

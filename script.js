@@ -6,11 +6,10 @@ for ( var i = 0; i < 100; i++){
   mailArray.push("alberto" + Math.floor(Math.random()*100)+ "@gmail.com");
   mailArray.push("gigi" + Math.floor(Math.random()*100)+ "@hotmail.it");
   mailArray.push("giacomo" + Math.floor(Math.random()*100)+ "@libero.net");
-  document.getElementById("list").innerHTML += `<li id="email-n` +[i]+ `">` + mailArray[i] +`<button class="copy-email" id="button`+ [i] + `" type="button" name="button">` + mailArray[i]+`</button></li>`
+  document.getElementById("list").innerHTML += `<li id="` +[i]+ `">` + mailArray[i] +`</li>`
 }
 
-
-
+console.log(adressArray)
 console.log(mailArray)
 var loginAction = document.getElementById("login")
 
@@ -54,6 +53,7 @@ resetAction.addEventListener("click", function(){
   document.getElementById("userEmail").value=""
 })
 
+
 // DADI
 
 
@@ -72,8 +72,8 @@ var player2 = Math.floor((Math.random()*6)+1)
 
 //console.log(player2)
 //console.log(player1)
-  document.getElementById("giocata-player1").innerHTML= "il giocatore 1 ha totalizzato: "+player1
-  document.getElementById("giocata-player2").innerHTML="il giocatore 2 ha totalizzato: "+player2
+  document.getElementById("giocata-player1").innerHTML= "Il giocatore 1 ha totalizzato: "+player1
+  document.getElementById("giocata-player2").innerHTML="Il giocatore 2 ha totalizzato: "+player2
 
 
 
@@ -82,7 +82,7 @@ if (player1 > player2){
   p1Score++
   document.getElementById("p1-score").innerHTML = "Punteggio giocatore 1: "+ p1Score
 } else if (player2 > player1){
-  document.getElementById("winnerIs").innerHTML = "the winner is player2 con un punteggio di " + player2
+  document.getElementById("winnerIs").innerHTML = "The winner is player2 con un punteggio di " + player2
   p2Score++
   document.getElementById("p2-score").innerHTML = "Punteggio giocatore 2: "+ p2Score
 } else {
